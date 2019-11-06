@@ -1,10 +1,12 @@
 {
 	"description": "项目配置文件",
 	"packOptions": {
-		"ignore": [{
-      "type": "suffix",
-      "value": ".ts"
-    }]
+		"ignore": [
+			{
+				"type": "suffix",
+				"value": ".ts"
+			}
+		]
 	},
 	"miniprogramRoot": "miniprogram/",
 	"compileType": "miniprogram",
