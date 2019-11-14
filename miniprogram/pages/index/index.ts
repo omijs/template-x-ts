@@ -6,7 +6,7 @@ import { IMyApp } from '../../app'
 
 const app = getApp<IMyApp>()
 
-create(store, {
+create.Page(store, {
   use: [
     'motto',
     'userInfo',
