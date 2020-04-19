@@ -141,8 +141,8 @@ create.Component = function (store, option) {
         };
         option.ready = option.lifetimes.ready = function (e) {
             var store = this.store;
-            store.instances[this.route] = store.instances[this.route] || [];
-            store.instances[this.route].push(this);
+            store.instances[this.is] = store.instances[this.is] || [];
+            store.instances[this.is].push(this);
             this.computed = option.computed;
             this.setData(option.data);
             var using = path_1.getUsing(store.data, option.use);
@@ -152,7 +152,7 @@ create.Component = function (store, option) {
         };
         option.lifetimes.detached = option.detached = function (e) {
             var _this = this;
-            this.store.instances[this.route] = this.store.instances[this.route].filter(function (ins) { return ins !== _this; });
+            this.store.instances[this.is] = this.store.instances[this.is].filter(function (ins) { return ins !== _this; });
             detached_1 && detached_1.call(this, e);
         };
         Component(option);
